@@ -1,0 +1,24 @@
+<ion-split-pane contentId="content" >
+  <ion-menu contentId="content" side="start">
+    <ion-header>
+      <ion-title>Menu</ion-title>
+      <ion-buttons>
+        <ion-button (click)="closeMenu()">
+          <ion-icon class="arrow" name="arrow-back" size="large"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item (click)="goToHome()">Home</ion-item>
+        <ion-item (click)="goToSports()">Sports</ion-item>
+        <ion-item (click)="goToSettings()">Settings</ion-item>
+        <ion-item (click)="logout()">
+          <ion-icon name="log-out-outline" color="primary" slot="start"></ion-icon>
+          Salir
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="content" main></ion-router-outlet>
+</ion-split-pane>

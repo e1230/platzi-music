@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>settings</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+  <div class="success-background">
+    <ion-avatar (click)="takePhoto()">
+      <img [src]="userImage" *ngIf="!photo"/>
+      <img [src]="photo" *ngIf="photo"/>
+    </ion-avatar>
+    <h1>Edgar Beltran</h1>
+    <h2>emaurobel1230@hotmail.com</h2>
+    <ion-grid>
+      <ion-row class="ion-align-items-center ion-text-center row-header">
+        <ion-col>140</ion-col>
+        <ion-col>2k</ion-col>
+        <ion-col>150</ion-col>
+      </ion-row>
+      <ion-row class="ion-align-items-center ion-text-center">
+        <ion-col>Artistas</ion-col>
+        <ion-col>Seguidotes</ion-col>
+        <ion-col>Canciones</ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+</ion-content>
